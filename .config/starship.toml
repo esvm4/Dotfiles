@@ -1,0 +1,18 @@
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+# Change default command timeout
+command_timeout = 1000
+
+# Make prompt a single line instead of two lines
+[line_break]
+disabled = true
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+# Always display time took to execute the previous command
+[cmd_duration]
+min_time = 1
+format = "[$duration](bold yellow) "
