@@ -2,7 +2,7 @@
 add_newline = false
 
 # Change default command timeout
-command_timeout = 1000
+command_timeout = 9999999999999999
 
 # Make prompt a single line instead of two lines
 [line_break]
