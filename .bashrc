@@ -240,7 +240,7 @@ alias hist='vi ~/.local/share/fish/fish_history'
 # xrandr
 alias scr='xrandr --output DP-4 --brightness'
 alias rotate='xrandr --output DP-4 --rotate'
-alias night='xrandr --output DP-1-1 --gamma 1.0:0.88:0.76 --brightness 0.55'
+alias night='xrandr --output DP-4 --gamma 1.0:0.88:0.76 --brightness 0.55'
 
 # bleachbit
 alias bs='bleachbit -s'

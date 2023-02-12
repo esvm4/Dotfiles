@@ -6,7 +6,7 @@ set -e fish_user_paths
 set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 
 ### EXPORT ###
-set fish_greeting                                 # Supresses fish's intro message
+# set fish_greeting                                 # Supresses fish's intro message
 set TERM "xterm-256color"                         # Sets the terminal type
 # set EDITOR "emacsclient -t -a ''"                 # $EDITOR use Emacs in terminal
 # set VISUAL "emacsclient -c -a emacs"              # $VISUAL use Emacs in GUI mode
@@ -291,7 +291,8 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/Dotfiles --work-tree=$HOME"
 # apt
 alias update='sudo apt update && sudo apt full-upgrade -y'
 alias clean='sudo apt autoremove && sudo apt clean'
-alias upkg='sudo snap refresh && flatpak update && flatpak remove --unused'
+alias upkg='sudo snap refresh && flatpak update'
+alias clflat='flatpak remove --unused'
 alias cero='update && upkg && clean'
 
 # config
@@ -303,7 +304,7 @@ alias hist='vi ~/.local/share/fish/fish_history'
 
 # xrandr
 alias scr='xrandr --output DP-4 --brightness'
-alias night='xrandr --output DP-4 --gamma 1.1:0.8:0.7 --brightness'
+alias night='xrandr --output DP-4 --gamma 1.0:0.88:0.76 --brightness 0.55'
 alias rotate='xrandr --output DP-4 --rotate'
 
 # bleachbit
@@ -321,10 +322,16 @@ alias hist='vi ~/.local/share/fish/fish_history'
 alias r='radian'
 alias clear='/bin/clear && colorscript random'
 
+# wget
+alias fWeb='wget --mirror --page-requisites --convert-link --no-clobber --no-parent --domains'
+
 # more aliases from bash
 if [ -f ~/.bash_aliases ]
     . ~/.bash_aliases
 end
+
+
+
 
 ### RANDOM COLOR SCRIPT ###
 colorscript random
