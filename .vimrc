@@ -26,7 +26,7 @@ set noswapfile                  " No swap
 set nobackup                    " No backups
 set scrolloff=8                 " Star scroll the screen 8 lines before
 set signcolumn=yes              " An extra column for messages
-set colorcolumn=86              " Warning at column 86 if I go too far
+set colorcolumn=80              " Warning at column 86 if I go too far
 set t_Co=256                    " Set term colours, if supported
 set background=dark             " Background to dark
 " PLUGINS ------------------------------------------------------- {{{
