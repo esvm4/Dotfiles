@@ -10,6 +10,9 @@ set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 set TERM "xterm-256color"                         # Sets the terminal type
 # set EDITOR "emacsclient -t -a ''"                 # $EDITOR use Emacs in terminal
 # set VISUAL "emacsclient -c -a emacs"              # $VISUAL use Emacs in GUI mode
+set -gx PATH /usr/local/cuda-12.2/bin $PATH
+set -gx LD_LIBRARY_PATH /usr/local/cuda-12.2/lib64/ $LD_LIBRARY_PATH
+
 
 ### SET MANPAGER
 
