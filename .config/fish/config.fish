@@ -333,6 +333,11 @@ if [ -f ~/.bash_aliases ]
     . ~/.bash_aliases
 end
 
+# run app in background
+function runinbackground
+    nohup $argv >/dev/null 2>&1 &
+end
+
 
 
 
@@ -344,4 +349,3 @@ starship init fish | source
 
 # Generated for envman. Do not edit.
 test -s "$HOME/.config/envman/load.fish"; and source "$HOME/.config/envman/load.fish"
-

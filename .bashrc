@@ -262,6 +262,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# run app in background
+runinbackground() {
+    nohup $@ >/dev/null 2>&1 &
+}
+
 ### SETTING THE STARSHIP PROMPT ###
 # eval "$(starship init bash)"
 
