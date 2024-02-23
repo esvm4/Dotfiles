@@ -321,6 +321,7 @@ alias tetris=/snap/bin/tetris-thefenriswolf.tetris
 alias ctc='xclip -se c'
 alias mat='mat2 --inplace'
 alias sf='shred -vfzu'
+alias ssf='sudo shred -vfzu'
 alias hist='vi ~/.local/share/fish/fish_history'
 alias r='radian'
 alias clear='/bin/clear && colorscript random'
