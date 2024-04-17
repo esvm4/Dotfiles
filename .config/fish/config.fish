@@ -293,9 +293,8 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/Dotfiles --work-tree=$HOME"
 
 # apt
 alias update='sudo apt update && sudo apt full-upgrade -y'
-alias clean='sudo apt autoremove && sudo apt clean'
-alias upkg='sudo snap refresh && flatpak update'
-alias clflat='flatpak remove --unused'
+alias clean='sudo apt autoremove -y && sudo apt clean'
+alias upkg='sudo snap refresh && flatpak update -y && flatpak remove --unused -y'
 alias cero='update && upkg && clean'
 
 # config
