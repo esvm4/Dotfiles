@@ -4,15 +4,26 @@ add_newline = false
 # Change default command timeout
 command_timeout = 9999999999999999
 
-# Make prompt a single line instead of two lines
-[line_break]
-disabled = true
+# Always display time took to execute the previous command
+[cmd_duration]
+min_time = 1_000
+format = "[$duration](bold yellow) "
+show_notifications = true
+min_time_to_notify = 10_000
+notification_timeout = 1_000
 
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
 
-# Always display time took to execute the previous command
-[cmd_duration]
-min_time = 1
-format = "[$duration](bold yellow) "
+[directory]
+truncate_to_repo = true
+truncation_length = 3
+use_os_path_sep = false
+
+[line_break]
+disabled = true
+
+[username]
+aliases = {"Administrator" = "admin"}
+format = '💅[$user]($style) '
