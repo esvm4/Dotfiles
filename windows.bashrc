@@ -139,6 +139,7 @@ alias gacm='git commit -am'
 alias gfetch='git fetch'
 alias gpull='git pull origin'
 alias gpush='git push origin'
+alias gpushf='git push -f origin'
 alias gstat='git status'
 alias gtag='git tag'
 alias gnewtag='git tag -a'
@@ -158,10 +159,21 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# run app in background
 runinbackground() {
     nohup $@ >/dev/null 2>&1 &
 }
 
+colorwheel () {
+printf "\033[0m
+    \033[49;35m|\033[49;31m|\033[101;31m|\033[41;97m|\033[49;91m|\033[49;93m|\033[0m
+  \033[105;35m|\033[45;97m|\033[49;97m||\033[100;97m||\033[49;37m||\033[103;33m|\033[43;97m|\033[0m
+  \033[49;95m|\033[49;94m|\033[100;37m||\033[40;97m||\033[40;37m||\033[49;33m|\033[49;32m|\033[0m
+  \033[104;34m|\033[44;97m|\033[49;90m||\033[40;39m||\033[49;39m||\033[102;32m|\033[42;97m|\033[0m
+    \033[49;34m|\033[49;36m|\033[106;36m|\033[46;97m|\033[49;96m|\033[49;92m|\033[0m
+
+"
+}
+
 ### SETTING THE STARSHIP PROMPT ###
 eval "$(starship init bash)"
+colorwheel
